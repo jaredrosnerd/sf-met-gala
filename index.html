@@ -293,36 +293,9 @@
       right: 0;
     }
 
-    .hero-scroll {
-      position: relative;
-      z-index: 3;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 5px;
-      padding-bottom: 0.5rem;
-      flex-shrink: 0;
-      padding-bottom: 0.75rem;
-    }
-    .scroll-line {
-      width: 1px;
-      height: 18px;
-      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.45));
-    }
-    .scroll-hint {
-      font-family: var(--font-mono);
-      font-size: 1.1rem;
-      color: rgba(255,255,255,0.55);
-      letter-spacing: 0.05em;
-      animation: chevronBounce 2s ease-in-out infinite 2.5s;
-    }
     @keyframes lineGrow {
       0%, 100% { opacity: 0.3; transform: scaleY(1); }
       50% { opacity: 0.8; transform: scaleY(1.15); }
-    }
-    @keyframes chevronBounce {
-      0%, 100% { transform: translateY(0); opacity: 0.4; }
-      50% { transform: translateY(4px); opacity: 0.9; }
     }
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(12px); }
@@ -993,9 +966,6 @@
       <a href="https://luma.com/sfmetgala" target="_blank" rel="noopener" class="hero-cta">Secure Your Place</a>
     </div>
 
-    <div class="hero-scroll">
-      <span class="scroll-hint">↓</span>
-    </div>
   </section>
 
   <!-- SECTION 01 — THE CONCEPT -->
