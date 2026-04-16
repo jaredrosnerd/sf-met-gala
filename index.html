@@ -219,14 +219,18 @@
     }
 
 
-    .hero-video {
+    .promo-video-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .promo-video-section video {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      z-index: 0;
-      opacity: 0.45;
     }
     /* Radial vignette overlay on hero */
     .hero::after {
@@ -945,11 +949,6 @@
   <section class="hero" id="heroSentinel">
     <div class="noise-overlay"></div>
 
-    <!-- Promo video background -->
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source src="MetGalaPromo_V3.mp4" type="video/mp4">
-    </video>
-
     <!-- Decorative corner elements -->
     <div class="hero-bg-deco">
       <!-- Hummingbird -->
@@ -991,6 +990,13 @@
   </section>
 
   <!-- SECTION 01 — THE CONCEPT -->
+  <!-- Promo video -->
+  <section class="promo-video-section">
+    <video autoplay muted loop playsinline>
+      <source src="MetGalaPromo_V3.mp4" type="video/mp4">
+    </video>
+  </section>
+
   <section id="concept">
     <div class="noise-overlay"></div>
     <span class="section-num" aria-hidden="true">01</span>
