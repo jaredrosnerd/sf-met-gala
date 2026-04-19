@@ -243,6 +243,35 @@
     }
     .hero-bg-deco, .hero-content { position: relative; z-index: 2; }
 
+
+    /* Photo strip */
+    .photo-strip {
+      overflow: hidden;
+      padding: 2.5rem 0;
+      background: var(--cream);
+    }
+    .photo-strip-track {
+      display: flex;
+      gap: 1rem;
+      width: max-content;
+      animation: stripScroll 30s linear infinite;
+    }
+    .photo-strip-track:hover { animation-play-state: paused; }
+    @keyframes stripScroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .photo-strip-track img {
+      height: 280px;
+      width: auto;
+      object-fit: cover;
+      border-radius: 2px;
+      display: block;
+      flex-shrink: 0;
+    }
+    @media (max-width: 600px) {
+      .photo-strip-track img { height: 200px; }
+    }
     /* Custom scrollbar */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--black); }
@@ -899,7 +928,7 @@
       .concept-grid { grid-template-columns: 1fr; gap: 2rem; }
       .concept-right { display: none; }
 
-      .sculpture-img { max-width: 200px; height: auto; }
+      .sculpture-img { max-width: min(340px, 85vw); height: auto; }
 
       .cards-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
       .evening-card { padding: 1.25rem 1rem 1rem; }
@@ -1204,6 +1233,32 @@
 </div>
     </div>
   </section>
+
+
+  <!-- Photo strip -->
+  <div class="photo-strip">
+    <div class="photo-strip-track">
+      <img src="photos/vintage1.jpg" alt="" loading="lazy">
+      <img src="photos/photo2.jpg" alt="" loading="lazy">
+      <img src="photos/vintage3.jpg" alt="" loading="lazy">
+      <img src="photos/photo5.jpg" alt="" loading="lazy">
+      <img src="photos/vintage2.jpg" alt="" loading="lazy">
+      <img src="photos/photo1.jpg" alt="" loading="lazy">
+      <img src="photos/vintage4.jpg" alt="" loading="lazy">
+      <img src="photos/photo3.jpg" alt="" loading="lazy">
+      <img src="photos/photo4.jpg" alt="" loading="lazy">
+      <!-- duplicate for seamless loop -->
+      <img src="photos/vintage1.jpg" alt="" loading="lazy">
+      <img src="photos/photo2.jpg" alt="" loading="lazy">
+      <img src="photos/vintage3.jpg" alt="" loading="lazy">
+      <img src="photos/photo5.jpg" alt="" loading="lazy">
+      <img src="photos/vintage2.jpg" alt="" loading="lazy">
+      <img src="photos/photo1.jpg" alt="" loading="lazy">
+      <img src="photos/vintage4.jpg" alt="" loading="lazy">
+      <img src="photos/photo3.jpg" alt="" loading="lazy">
+      <img src="photos/photo4.jpg" alt="" loading="lazy">
+    </div>
+  </div>
 
   <!-- SECTION 05 — THE DETAILS -->
   <section id="details">
