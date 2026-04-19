@@ -257,9 +257,10 @@
       display: flex;
       gap: 1rem;
       width: max-content;
-      animation: stripScroll 30s linear infinite;
+      animation: stripScroll 38s linear infinite;
+      will-change: transform;
+      backface-visibility: hidden;
     }
-    .photo-strip-track:hover { animation-play-state: paused; }
     .photo-strip-caption {
       text-align: center;
       font-family: 'IBM Plex Mono', monospace;
@@ -271,8 +272,8 @@
       padding: 0;
     }
     @keyframes stripScroll {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
+      from { transform: translate3d(0, 0, 0); }
+      to   { transform: translate3d(-50%, 0, 0); }
     }
     .photo-strip-track img {
       height: 280px;
@@ -284,6 +285,7 @@
     }
     @media (max-width: 600px) {
       .photo-strip-track img { height: 200px; }
+      .photo-strip-track { animation-duration: 22s; }
     }
     /* Custom scrollbar */
     ::-webkit-scrollbar { width: 6px; }
@@ -1253,25 +1255,25 @@
   <!-- Photo strip -->
   <div class="photo-strip">
     <div class="photo-strip-track">
-      <img src="photos/bw1.jpg" alt="" loading="lazy">
-      <img src="photos/color1.jpg" alt="" loading="lazy">
-      <img src="photos/bw2.jpg" alt="" loading="lazy">
-      <img src="photos/color2.jpg" alt="" loading="lazy">
-      <img src="photos/bw3.jpg" alt="" loading="lazy">
-      <img src="photos/color3.jpg" alt="" loading="lazy">
-      <img src="photos/bw4.jpg" alt="" loading="lazy">
-      <img src="photos/color4.jpg" alt="" loading="lazy">
-      <img src="photos/color5.jpg" alt="" loading="lazy">
+      <img src="photos/bw1.jpg" alt="" loading="eager">
+      <img src="photos/color1.jpg" alt="" loading="eager">
+      <img src="photos/bw2.jpg" alt="" loading="eager">
+      <img src="photos/color2.jpg" alt="" loading="eager">
+      <img src="photos/bw3.jpg" alt="" loading="eager">
+      <img src="photos/color3.jpg" alt="" loading="eager">
+      <img src="photos/bw4.jpg" alt="" loading="eager">
+      <img src="photos/color4.jpg" alt="" loading="eager">
+      <img src="photos/color5.jpg" alt="" loading="eager">
       <!-- duplicate for seamless loop -->
-      <img src="photos/bw1.jpg" alt="" loading="lazy">
-      <img src="photos/color1.jpg" alt="" loading="lazy">
-      <img src="photos/bw2.jpg" alt="" loading="lazy">
-      <img src="photos/color2.jpg" alt="" loading="lazy">
-      <img src="photos/bw3.jpg" alt="" loading="lazy">
-      <img src="photos/color3.jpg" alt="" loading="lazy">
-      <img src="photos/bw4.jpg" alt="" loading="lazy">
-      <img src="photos/color4.jpg" alt="" loading="lazy">
-      <img src="photos/color5.jpg" alt="" loading="lazy">
+      <img src="photos/bw1.jpg" alt="" loading="eager">
+      <img src="photos/color1.jpg" alt="" loading="eager">
+      <img src="photos/bw2.jpg" alt="" loading="eager">
+      <img src="photos/color2.jpg" alt="" loading="eager">
+      <img src="photos/bw3.jpg" alt="" loading="eager">
+      <img src="photos/color3.jpg" alt="" loading="eager">
+      <img src="photos/bw4.jpg" alt="" loading="eager">
+      <img src="photos/color4.jpg" alt="" loading="eager">
+      <img src="photos/color5.jpg" alt="" loading="eager">
     </div>
     <p class="photo-strip-caption">Photos from our past event, the SF Adult Prom at the Exploratorium</p>
   </div>
