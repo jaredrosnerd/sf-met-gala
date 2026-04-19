@@ -247,7 +247,7 @@
     /* Photo strip */
     .photo-strip {
       overflow: hidden;
-      padding: 2.5rem 0;
+      padding: 0.5rem 0 2rem;
       background: var(--cream);
     }
     .photo-strip-track {
@@ -257,6 +257,16 @@
       animation: stripScroll 30s linear infinite;
     }
     .photo-strip-track:hover { animation-play-state: paused; }
+    .photo-strip-caption {
+      text-align: center;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      color: rgba(0,0,0,0.35);
+      text-transform: uppercase;
+      margin: 1rem 0 0;
+      padding-bottom: 0.5rem;
+    }
     @keyframes stripScroll {
       from { transform: translateX(0); }
       to   { transform: translateX(-50%); }
@@ -668,6 +678,7 @@
     /* ─── SECTION 04 — EVENING ─── */
     #evening {
       background: var(--off-white);
+      padding-bottom: 0;
     }
     #evening .section-num {
       color: var(--crimson);
@@ -1238,26 +1249,27 @@
   <!-- Photo strip -->
   <div class="photo-strip">
     <div class="photo-strip-track">
-      <img src="photos/vintage1.jpg" alt="" loading="lazy">
-      <img src="photos/photo2.jpg" alt="" loading="lazy">
-      <img src="photos/vintage3.jpg" alt="" loading="lazy">
-      <img src="photos/photo5.jpg" alt="" loading="lazy">
-      <img src="photos/vintage2.jpg" alt="" loading="lazy">
-      <img src="photos/photo1.jpg" alt="" loading="lazy">
-      <img src="photos/vintage4.jpg" alt="" loading="lazy">
-      <img src="photos/photo3.jpg" alt="" loading="lazy">
-      <img src="photos/photo4.jpg" alt="" loading="lazy">
+      <img src="photos/bw1.jpg" alt="" loading="lazy">
+      <img src="photos/color1.jpg" alt="" loading="lazy">
+      <img src="photos/bw2.jpg" alt="" loading="lazy">
+      <img src="photos/color2.jpg" alt="" loading="lazy">
+      <img src="photos/bw3.jpg" alt="" loading="lazy">
+      <img src="photos/color3.jpg" alt="" loading="lazy">
+      <img src="photos/bw4.jpg" alt="" loading="lazy">
+      <img src="photos/color4.jpg" alt="" loading="lazy">
+      <img src="photos/color5.jpg" alt="" loading="lazy">
       <!-- duplicate for seamless loop -->
-      <img src="photos/vintage1.jpg" alt="" loading="lazy">
-      <img src="photos/photo2.jpg" alt="" loading="lazy">
-      <img src="photos/vintage3.jpg" alt="" loading="lazy">
-      <img src="photos/photo5.jpg" alt="" loading="lazy">
-      <img src="photos/vintage2.jpg" alt="" loading="lazy">
-      <img src="photos/photo1.jpg" alt="" loading="lazy">
-      <img src="photos/vintage4.jpg" alt="" loading="lazy">
-      <img src="photos/photo3.jpg" alt="" loading="lazy">
-      <img src="photos/photo4.jpg" alt="" loading="lazy">
+      <img src="photos/bw1.jpg" alt="" loading="lazy">
+      <img src="photos/color1.jpg" alt="" loading="lazy">
+      <img src="photos/bw2.jpg" alt="" loading="lazy">
+      <img src="photos/color2.jpg" alt="" loading="lazy">
+      <img src="photos/bw3.jpg" alt="" loading="lazy">
+      <img src="photos/color3.jpg" alt="" loading="lazy">
+      <img src="photos/bw4.jpg" alt="" loading="lazy">
+      <img src="photos/color4.jpg" alt="" loading="lazy">
+      <img src="photos/color5.jpg" alt="" loading="lazy">
     </div>
+    <p class="photo-strip-caption">Photos from our past event, the SF Adult Prom at the Exploratorium</p>
   </div>
 
   <!-- SECTION 05 — THE DETAILS -->
